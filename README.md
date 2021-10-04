@@ -9,7 +9,7 @@ Since it's more a concept app, it’s perfectly fine to make some compromises:
       
 Don't be neither too generic nor too specific – don't polish it too much, but also keep focus on the code as well  – your final product should be „just enough”.
 * if you don't feel prepared for the job, either get familiar with languages/technologies you'd consider useful here, or let us know you're not ready for it;
-* we'll notice if you've worked on it a week instead of a few hours – don't do more than it's specified in the requirements;
+* we'll notice if you've worked on it a week instead of a several hours – don't do more than it's specified in the requirements;
 
 
 Your work should be available via GitHub as a public repository, commit often[2]. 
@@ -21,7 +21,3 @@ Value quality over quantity. And, finally, when in doubt – especially about th
 \[1\]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md
 
 \[2\]: Get familiar with SRP principle (if you don't know it yet) and apply it to commits. Get familiar with this https://chris.beams.io/posts/git-commit/ . 
-
-\[3\]: https://en.wikipedia.org/wiki/Write_once_read_many
-
-\[4\]: https://stackoverflow.com/questions/1077412/what-is-an-idempotent-operation
