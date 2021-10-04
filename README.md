@@ -1,47 +1,5 @@
 ## Backend interview
 
-A test project for a Backend Developer position.
-
-Plenty of various data vaults/lakes/warehouses are around. Why not implement our own? Let's follow the WORM[3] principle and implement simple repository which stores any data user provides. Everytime user provides the data, a fingerprint for this data is being generated so we can uniquely identify this piece of data.
-
-
-Requirements:
-
-* Pick some HTTP server (but don't go for a framework way, ie. Django, it is not needed here) and consume `openapi.yaml` file;
-* Implement two endpoints that are specified in `openapi.yaml` and provide simple input validation for these endpoints, according to the OAS[1];
-* Store the schemas `payload` in the simplest datastore you can imagine;
-* Generate a fingerprint (use some hash function for it, ie. SHA256) for the `payload` you've uploaded via `POST /schemas` and return this fingerprint as hashlink (see `openapi.yaml`);
-* The same `payload` may be uploaded multiple times, but if it is already stored in the datastore, we do nothing (just return the fingerprint) as we implement idempotent operation[4];
-* Provide README.md with essential info how to run it with some examples.
-
-#### Examples
-
-```
-# 1.
-POST /schemas
-{ "payload": "bleble" }
-
-
-response:
-{ "hashlink": "708b1a7a6c6507b55ab537894493b61d46230ceeb21b605838a050a75c7ef0bb" }
-
-
-# 2. Support for idempotent operation:
-POST /schemas
-{ "payload": "bleble" }
-
-
-response:
-{ "hashlink": "708b1a7a6c6507b55ab537894493b61d46230ceeb21b605838a050a75c7ef0bb" }
-
-
-# 3.
-GET /schemas/708b1a7a6c6507b55ab537894493b61d46230ceeb21b605838a050a75c7ef0bb
-
-response:
-{ "payload": "bleble" }
-```
-
 ### Caveats
 
 Since it's more a concept app, it’s perfectly fine to make some compromises:
